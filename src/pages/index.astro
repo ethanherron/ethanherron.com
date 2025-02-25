@@ -1,11 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Import your profile image - you'll need to add this file to your public directory
+// For example: /public/images/profile.jpg
 ---
 
 <Layout title="Ethan Herron">
+	<!-- Profile Picture in upper right -->
+	<div class="absolute top-8 right-32 md:right-40 lg:right-48">
+		<img 
+			src="/images/headshot_git_2.jpg" 
+			alt="Ethan Herron" 
+			class="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-2 border-gray-200 dark:border-gray-700 shadow-md"
+		/>
+	</div>
+
 	<div class="space-y-16">
 		<!-- Header Section -->
 		<header class="text-center space-y-4">
@@ -20,6 +28,16 @@ import Layout from '../layouts/Layout.astro';
 				>
 					email
 				</a>
+
+				<a 
+					href="https://www.linkedin.com/in/ethan-herron-9218a1171/" 
+					class="dark:text-white text-black px-4 py-1 hover:opacity-70"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					linkedin
+				</a>
+
 				<a 
 					href="https://github.com/ethanherron" 
 					class="dark:text-white text-black px-4 py-1 hover:opacity-70"
@@ -28,8 +46,72 @@ import Layout from '../layouts/Layout.astro';
 				>
 					github
 				</a>
+			
 			</div>
 		</header>
+
+		<!-- Experience Section -->
+		<section class="space-y-4">
+			<h2 class="text-3xl font-bold">Experience</h2>
+			<ul class="space-y-6">
+				<li class="space-y-2">
+					<h3 class="text-lg font-semibold">Industrial AI/Generative AI Intern</h3>
+					<div class="text-gray-600 dark:text-gray-400">
+						Hitachi America Ltd. | Santa Clara
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						Jan 2025 - Present · 2 mos
+					</div>
+				</li>
+				
+				<li class="space-y-2">
+					<h3 class="text-lg font-semibold">Graduate Research Assistant</h3>
+					<div class="text-gray-600 dark:text-gray-400">
+						Iowa State University | Ames
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						Aug 2020 - Present
+					</div>
+				</li>
+				
+				<li class="space-y-2">
+					<h3 class="text-lg font-semibold">PhD Intern - Data Science</h3>
+					<div class="text-gray-600 dark:text-gray-400">
+						Pacific Northwest National Laboratory | Richland
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						<div>May 2022 - Sep 2022
+						<div>Jun 2021 - Sep 2021
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- Education Section -->
+		<section class="space-y-4">
+			<h2 class="text-3xl font-bold">Education</h2>
+			<ul class="space-y-6">
+				<li class="space-y-2">
+					<h3 class="text-lg font-semibold">PhD, Mechanical Engineering and Electrical Engineering</h3>
+					<div class="text-gray-600 dark:text-gray-400">
+						Iowa State University | Ames
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						2020 - 2025
+					</div>
+				</li>
+				
+				<li class="space-y-2">
+					<h3 class="text-lg font-semibold">BS, Mathematics</h3>
+					<div class="text-gray-600 dark:text-gray-400">
+						Iowa State University | Ames
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						2018 - 2020
+					</div>
+				</li>
+			</ul>
+		</section>
 
 		<!-- Publications Section -->
 		<section class="space-y-4">
@@ -37,34 +119,89 @@ import Layout from '../layouts/Layout.astro';
 			<ul class="space-y-6">
 				<li class="space-y-2">
 					<a 
-						href="https://arxiv.org/abs/2312.09715" 
+						href="https://www.sciencedirect.com/science/article/abs/pii/S0010448524000368" 
 						class="text-lg hover:opacity-70 transition-opacity"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
-						Neural Finite Element Networks: Data-Free Training of Finite Element Inspired Neural Networks for Solving PDEs
+						Neural PDE solvers for irregular domains
 					</a>
 					<div class="text-gray-600 dark:text-gray-400">
-						arXiv preprint, 2023
+						Computer-Aided Design, 2024
 					</div>
 					<div class="text-sm text-gray-500 dark:text-gray-400">
-						Ethan Herron, Biswajit Khara, Baskar Ganapathysubramanian, Adarsh Krishnamurthy
+						Biswajit Khara, Ethan Herron, Aditya Balu, Dhruv Gamdha, Bella CH Yang, Kumar Saurabh, Anushrut Jignasu, Zhanhong Jiang, Soumik Sarkar, Chinmay Hegde, Baskar Ganapathysubramanian, Adarsh Krishnamurthy
 					</div>
 				</li>
 				
-				<!-- Add more publications following the same pattern -->
-				<!-- <li class="space-y-2">
+				<li class="space-y-2">
 					<a 
-						href="paper_url" 
-						class="text-xl font-semibold hover:text-primary transition-colors"
+						href="https://www.sciencedirect.com/science/article/abs/pii/S0010448524000344" 
+						class="text-lg hover:opacity-70 transition-opacity"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
-						Paper Title
+						Latent diffusion models for structural component design
 					</a>
 					<div class="text-gray-600 dark:text-gray-400">
-						Venue/Journal, Year
+						Computer-Aided Design, 2024
 					</div>
 					<div class="text-sm text-gray-500 dark:text-gray-400">
-						Authors
+						Ethan Herron, Jaydeep Rade, Anushrut Jignasu, Baskar Ganapathysubramanian, Aditya Balu, Soumik Sarkar, Adarsh Krishnamurthy
 					</div>
-				</li> -->
+				</li>
+				
+				<li class="space-y-2">
+					<a 
+						href="https://www.sciencedirect.com/science/article/abs/pii/S0952197623012174" 
+						class="text-lg hover:opacity-70 transition-opacity"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Deep learning-based 3D multigrid topology optimization of manufacturable designs
+					</a>
+					<div class="text-gray-600 dark:text-gray-400">
+						Engineering Applications of Artificial Intelligence, 2023
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						Jaydeep Rade, Anushrut Jignasu, Ethan Herron, Ashton Corpuz, Baskar Ganapathysubramanian, Soumik Sarkar, Aditya Balu, Adarsh Krishnamurthy
+					</div>
+				</li>
+
+				<li class="space-y-2">
+					<a 
+						href="https://www.sciencedirect.com/science/article/abs/pii/S0952197621003316" 
+						class="text-lg hover:opacity-70 transition-opacity"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Algorithmically-consistent deep learning frameworks for structural topology optimization
+					</a>
+					<div class="text-gray-600 dark:text-gray-400">
+						Engineering Applications of Artificial Intelligence, 2021
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						Jaydeep Rade, Aditya Balu, Ethan Herron, Jay P. Pathak, Rishikesh Ranade, Soumik Sarkar, Adarsh Krishnamurthy
+					</div>
+				</li>
+				
+				<li class="space-y-2">
+					<a 
+						href="https://proceedings.mlr.press/v139/esfandiari21a.html" 
+						class="text-lg hover:opacity-70 transition-opacity"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Cross-gradient aggregation for decentralized learning from non-iid data
+					</a>
+					<div class="text-gray-600 dark:text-gray-400">
+						International Conference on Machine Learning, 2021
+					</div>
+					<div class="text-sm text-gray-500 dark:text-gray-400">
+						Yasaman Esfandiari, Sin Yong Tan, Zhanhong Jiang, Aditya Balu, Ethan Herron, Chinmay Hegde, Soumik Sarkar
+					</div>
+				</li>
+				
 			</ul>
 		</section>
 
