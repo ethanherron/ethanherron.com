@@ -1,4 +1,6 @@
 ---
+import Analytics from '@vercel/analytics/astro';
+
 interface Props {
 	title: string;
 	description?: string;
@@ -24,6 +26,7 @@ const { title, description = "Ethan Herron's personal website" } = Astro.props;
 		<main class="max-w-4xl mx-auto px-4 py-8">
 			<slot />
 		</main>
+		<Analytics />
 	</body>
 </html>
 
